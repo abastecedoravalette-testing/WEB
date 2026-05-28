@@ -5,18 +5,20 @@ import ClientLayout from "./layouts/ClientLayout";
 import HomePage from "./pages/HomePage";
 import CatalogPage from "./pages/CatalogPage";
 import TroceoPage from "./pages/TroceoPage";
-import CutPage from "./pages/CutPage";
+import ProductPage from "./pages/ProductPage";
 import MayoristasPage from "./pages/MayoristasPage";
+import SucursalesPage from "./pages/SucursalesPage";
 
 function App() {
   return (
     <Routes>
       <Route element={<ClientLayout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/cortes" element={<CatalogPage />} />
-        <Route path="/cortes/:seccion/:corte" element={<CutPage />} />
+        <Route path="/productos" element={<CatalogPage />} />
+        <Route path="/productos/:seccion/:producto" element={<ProductPage />} />
         <Route path="/troceos/:troceo" element={<TroceoPage />} />
-        <Route path="/mayorista" element={<MayoristasPage />} />
+        <Route path="/mayoristas" element={<MayoristasPage />} />
+        <Route path="/sucursales" element={<SucursalesPage />} />
       </Route>
     </Routes>
   );
